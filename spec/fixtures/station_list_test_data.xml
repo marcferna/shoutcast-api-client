@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <stationlist>
+    <tunein base="/sbin/tunein-station.pls" base-m3u="/sbin/tunein-station.m3u" base-xspf="/sbin/tunein-station.xspf" />
+    <station name=".977 The Hitz Channel-[SHOUTcast.com]" mt="audio/mpeg" id="9907" br="128" genre="Pop Rock Top 40" ct="The Fray - You Found Me" lc="4670"/>
+    <station name="HOT FM - Lebih Hangat Daripada Biasa : HOT fm-[SHOUTcast.com]" mt="audio/mpeg" id="120149" br="24" genre="Malaysia Malay" ct="LELAKI IDAMAN MELLY_GOESLOW " lc="3961"/>
+    <station name="S K Y . F M - Absolutely Smooth Jazz - the world's smoothest jazz 24 hours a day-[SHOUTcast.com]" mt="audio/mpeg" id="1264" br="96" genre="Soft Smooth Jazz" ct="Oli Silk - De-stress Signal" lc="3507"/>
+    <station name="Groove Salad: a nicely chilled plate of ambient beats and grooves. [SomaFM]-[SHOUTcast.com]" mt="audio/mpeg" id="6687" br="128" genre="Ambient Chill" ct="Verbrilli Sound - Descender" lc="2680"/>
+    <station name=".977 The 80s Channel-[SHOUTcast.com]" mt="audio/mpeg" id="6803" br="128" genre="80s Pop Rock" ct="Starship - Nothing`s gonna stop us now (1987)" lc="2192"/>
+    <station name="The Alex Jones Show-[SHOUTcast.com]" mt="audio/mpeg" id="5516" br="32" genre="Talk" ct="Refeed: Hour 1 (Listen by phone 512-646-5000)" lc="1987"/>
+  </stationlist>
+</xml>
