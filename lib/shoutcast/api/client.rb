@@ -15,7 +15,7 @@ module Shoutcast
         end
       end
 
-    private
+      private
 
       attr_accessor :key
 
@@ -23,10 +23,9 @@ module Shoutcast
         'http://api.shoutcast.com'
       end
 
-      def url(path, parameters = {})
+      def url(path)
         "#{base_url}#{path}?k=#{key}"
       end
-
     end
   end
 end

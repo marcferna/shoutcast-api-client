@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Shoutcast::Api::Client do
-
   context '#initialize' do
     it 'requires the key attribute' do
       expect { Shoutcast::Api::Client.new }.to raise_error(ArgumentError)

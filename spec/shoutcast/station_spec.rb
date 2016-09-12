@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Shoutcast::Api::Station do
-
   context '#parse' do
     let(:id) { '1234' }
     let(:name) { 'Rac1' }
@@ -13,7 +12,7 @@ describe Shoutcast::Api::Station do
     let(:lc) { '1987' }
     let(:logo) { 'http://rac1.org/logo.png' }
 
-    let(:attributes) {
+    let(:attributes) do
       {
         '@id'     => id,
         '@name'   => name,
@@ -25,7 +24,7 @@ describe Shoutcast::Api::Station do
         '@lc'     => lc,
         '@logo'   => logo
       }
-    }
+    end
 
     let(:station) { Shoutcast::Api::Station.parse(attributes) }
 

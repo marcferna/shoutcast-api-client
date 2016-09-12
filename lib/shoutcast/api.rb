@@ -4,6 +4,5 @@ require 'shoutcast/api/station'
 
 module Shoutcast
   module Api
-
   end
 end
