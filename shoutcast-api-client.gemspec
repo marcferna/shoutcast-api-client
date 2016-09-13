@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'shoutcast/api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'shoutcast-api'
+  spec.name          = 'shoutcast-api-client'
   spec.version       = Shoutcast::Api::VERSION
   spec.authors       = ['Marc Fernandez']
   spec.email         = ['marc.fernandezg@gmail.com']
 
-  spec.summary       = 'Wrapper for the SHOUTcast API.'
+  spec.summary       = 'SHOUTcast API wrapper.'
   spec.description   = 'Wrapper for the SHOUTcast API.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = 'https://github.com/marcferna/shoutcast-api-client'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the
