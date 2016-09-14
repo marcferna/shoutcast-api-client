@@ -39,16 +39,41 @@ gem 'shoutcast-api-client'
 ```
 
 And then execute:
-
-    $ bundle
-
+```ruby
+$ bundle
+```
 Or install it yourself as:
-
-    $ gem install shoutcast-api-client
-
+```
+$ gem install shoutcast-api-client
+```
 ## Usage
 
-TODO: Write usage instructions here
+### Initialization
+
+First need to initialize the client with your SHOUTcast API key
+
+```ruby
+client = Shourcast::Api::Client.new("YOUR_API_KEY_GOES_HERE")
+```
+
+### Top 500
+Get top 500 stations on SHOUTcast Radio directory.
+```ruby
+client.top_500
+```
+
+Returns an array of [Stations](lib/shoutcast/api/station.rb):
+```ruby
+[
+  <Shoutcast::Api::Station:0x007fb3c40361d0 @id="9907", @name=".977 The Hitz Channel-[SHOUTcast.com]", @mt="audio/mpeg", @br="128", @genres=["Pop Rock Top 40"], @ct="The Fray - You Found Me", @lc="4670", @logo=nil>,
+  <Shoutcast::Api::Station:0x007fb3c5840b68 @id="120149", @name="HOT FM - Lebih Hangat Daripada Biasa : HOT fm-[SHOUTcast.com]", @mt="audio/mpeg", @br="24", @genres=["Malaysia Malay"], @ct="LELAKI IDAMAN MELLY_GOESLOW ", @lc="3961", @logo=nil>,
+  <Shoutcast::Api::Station:0x007fb3c583bf50 @id="1264", @name="S K Y . F M - Absolutely Smooth Jazz - the world's smoothest jazz 24 hours a day-[SHOUTcast.com]", @mt="audio/mpeg", @br="96", @genres=["Soft Smooth Jazz"], @ct="Oli Silk - De-stress Signal", @lc="3507", @logo=nil>,
+  <Shoutcast::Api::Station:0x007fb3c583b6b8 @id="6687", @name="Groove Salad: a nicely chilled plate of ambient beats and grooves. [SomaFM]-[SHOUTcast.com]", @mt="audio/mpeg", @br="128", @genres=["Ambient Chill"], @ct="Verbrilli Sound - Descender", @lc="2680", @logo=nil>,
+  <Shoutcast::Api::Station:0x007fb3c583ae70 @id="6803", @name=".977 The 80s Channel-[SHOUTcast.com]", @mt="audio/mpeg", @br="128", @genres=["80s Pop Rock"], @ct="Starship - Nothing`s gonna stop us now (1987)", @lc="2192", @logo=nil>,
+  <Shoutcast::Api::Station:0x007fb3c583a588 @id="5516", @name="The Alex Jones Show-[SHOUTcast.com]", @mt="audio/mpeg", @br="32", @genres=["Talk"], @ct="Refeed: Hour 1 (Listen by phone 512-646-5000)", @lc="1987", @logo=nil>
+]
+```
+
 
 ## Contributing
 
