@@ -53,7 +53,7 @@ $ gem install shoutcast-api-client
 First need to initialize the client with your SHOUTcast API key
 
 ```ruby
-client = Shourcast::Api::Client.new("YOUR_API_KEY_GOES_HERE")
+client = Shoutcast::Api::Client.new(key: 'YOUR_API_KEY_GOES_HERE')
 ```
 
 ### Top 500
