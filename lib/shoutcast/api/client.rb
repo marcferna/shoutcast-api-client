@@ -9,22 +9,60 @@ module Shoutcast
       end
 
       def top_500
-        response = RestClient.get url('/legacy/Top500')
-        Nori.new.parse(response)['stationlist']['station'].map do |attributes|
-          Shoutcast::Api::Station.parse(attributes)
-        end
+        response = RestClient.get(
+          url(path: '/legacy/Top500')
+        )
+        parse_stations(response)
+      end
+
+      def search(
+        keyword:,
+        limit:      nil,
+        offset:     nil,
+        bitrate:    nil,
+        media_type: nil
+      )
+        response = RestClient.get(
+          url(
+            path: '/legacy/stationsearch',
+            parameters: {
+              search: keyword,
+              limit:  build_limit_parameter(limit: limit, offset: offset),
+              br:     bitrate,
+              mt:     media_type
+            }
+          )
+        )
+        parse_stations(response)
       end
 
       private
 
       attr_accessor :key
 
-      def base_url
-        'http://api.shoutcast.com'
+      def url(path:, parameters: {})
+        Shoutcast::Api::Url.new(
+          path:       path,
+          key:        key,
+          parameters: parameters
+        ).to_s
       end
 
-      def url(path)
-        "#{base_url}#{path}?k=#{key}"
+      def parse_stations(response)
+        return [] if response.nil?
+        parsed_response = Nori.new.parse(response)
+        return [] if parsed_response['stationlist'].nil?
+        return [] if parsed_response['stationlist']['station'].nil?
+        Nori.new.parse(response)['stationlist']['station'].map do |attributes|
+          Shoutcast::Api::Station.parse(attributes)
+        end
+      end
+
+      def build_limit_parameter(limit: nil, offset: nil)
+        return nil if limit.nil?
+        parameter = limit.to_s
+        parameter += ",#{offset}" unless offset.nil?
+        parameter
       end
     end
   end

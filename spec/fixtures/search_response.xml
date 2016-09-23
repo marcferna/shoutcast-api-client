@@ -1,0 +1,7 @@
+<stationlist>
+  <tunein base="/sbin/tunein-station.pls"/>
+  <station name="Groove Salad: a nicely chilled plate of ambient beats and grooves. [SomaFM]-[SHOUTcast.com]" mt="audio/mpeg" id="6687" br="128" genre="Ambient Chill" ct="Audiomontage - Abyss" lc="241"></station>
+  <station name="((Metaphoric.me))128k Room42, ambient beats and chill grooves-[SHOUTcast.com]" mt="audio/mpeg" id="8434" br="128" genre="Ambient Chill" ct="Jazz City - La Noche (Smooth Latin Groove Mix)" lc="83"></station>
+  <station name="Groove Salad: a nicely chilled plate of ambient beats and grooves. [SomaFM]-[SHOUTcast.com]" mt="audio/mpeg" id="8010" br="24" genre="Ambient Chill" ct="Audiomontage - Abyss" lc="54"></station>
+  <station name="Groove Salad: a nicely chilled plate of ambient beats and grooves. [SomaFM]-[SHOUTcast.com]" mt="audio/mpeg" id="9073" br="56" genre="Ambient Chill" ct="Warheads - Daphne" lc="30"> </station>
+</stationlist>

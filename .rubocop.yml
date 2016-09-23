@@ -4,5 +4,11 @@ AllCops:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/BlockDelimiters:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
 Documentation:
   Enabled: false
