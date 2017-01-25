@@ -36,6 +36,27 @@ module Shoutcast
         parse_stations(response)
       end
 
+      def genre_search(
+        genre:,
+        limit:      nil,
+        offset:     nil,
+        bitrate:    nil,
+        media_type: nil
+      )
+        response = RestClient.get(
+          url(
+            path: '/legacy/genresearch',
+            parameters: {
+              genre: genre,
+              limit: build_limit_parameter(limit: limit, offset: offset),
+              br:    bitrate,
+              mt:    media_type
+            }
+          )
+        )
+        parse_stations(response)
+      end
+
       private
 
       attr_accessor :key
