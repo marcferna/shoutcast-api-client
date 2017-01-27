@@ -113,7 +113,7 @@ Returns an array of [Stations](lib/shoutcast/api/station.rb):
 ### Station Search By Genre
 Get stations which match the genre specified as query.
 ```ruby
-client.search(
+client.genre_search(
     genre:     'GENRE_TO_SEARCH', 
     limit:      PAGE_COUNT_LIMIT, 
     offset:     PAGE_OFFSET, 
